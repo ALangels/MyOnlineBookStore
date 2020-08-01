@@ -13,7 +13,7 @@ public class ViewBookServlet extends GenericServlet{
 		res.setContentType("text/html");
 		try {
 			Connection con = DBConnection.getCon();
-			PreparedStatement ps = con.prepareStatement("SELECT * FROM " + IBookConstants.TABLE_BOOK);
+			PreparedStatement ps = con.prepareStatement("Select * from " + IBookConstants.TABLE_BOOK);
 			ResultSet rs = ps.executeQuery();
 			RequestDispatcher rd = req.getRequestDispatcher("ViewBooks.html");
 			rd.include(req, res);

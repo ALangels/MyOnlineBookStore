@@ -15,7 +15,7 @@ public class RemoveBookServlet extends GenericServlet {
 		try {
 			Connection con = DBConnection.getCon();
 			PreparedStatement ps = con.prepareStatement(
-					"DELETE FROM " + IBookConstants.TABLE_BOOK + "  WHERE " + IBookConstants.COLUMN_BARCODE + "=?");
+					"delete from " + IBookConstants.TABLE_BOOK + "  where " + IBookConstants.COLUMN_BARCODE + "=?");
 			ps.setString(1, bkid);
 			int k = ps.executeUpdate();
 			if (k == 1) {
