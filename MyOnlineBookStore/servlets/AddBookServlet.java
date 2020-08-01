@@ -28,7 +28,7 @@ public class AddBookServlet extends GenericServlet{
 		
 		try {
 			Connection con = DBConnection.getCon();
-			PreparedStatement ps = con.prepareStatement("insert into " + IBookConstants.TABLE_BOOK + "  values(?,?,?,?,?)");
+			PreparedStatement ps = con.prepareStatement("INSERT INTO " + IBookConstants.TABLE_BOOK + "  VALUES(?,?,?,?,?)");
 			ps.setString(1, bCode);
 			ps.setString(2, bName);
 			ps.setString(3, bAuthor);

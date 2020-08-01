@@ -23,7 +23,7 @@ public class UserRegisterServlet extends GenericServlet {
 		try {
 			Connection con = DBConnection.getCon();
 			PreparedStatement ps = con
-					.prepareStatement("insert into " + IUserContants.TABLE_USERS + "  values(?,?,?,?,?,?,?)");
+					.prepareStatement("INSERT INTO " + IUserContants.TABLE_USERS + "  VALUES(?,?,?,?,?,?,?)");
 			ps.setString(1, uName);
 			ps.setString(2, pWord);
 			ps.setString(3, fName);
