@@ -13,7 +13,7 @@ public class ReceiptServlet extends GenericServlet {
 		res.setContentType(IOnlineBookStoreConstants.CONTENT_TYPE_TEXT_HTML);
 		try {
 			Connection con = DBConnection.getCon();
-			PreparedStatement ps = con.prepareStatement("SELECT * FROM " + IBookConstants.TABLE_BOOK);
+			PreparedStatement ps = con.prepareStatement("select * from " + IBookConstants.TABLE_BOOK);
 			ResultSet rs = ps.executeQuery();
 			int i = 0;
 			RequestDispatcher rd = req.getRequestDispatcher("ViewBooks.html");
